@@ -280,10 +280,27 @@ t = [group4a]
 group4a = ((+ a) // (b / c))
 a = 1 b = 2 c = 3
 
-byte-strings = 'hello world' / h'68656c6c6f20776f726c64' / b64'asdf'
-multi-line-byte = 'hello  ; everything is allowed here, interpretation up to the parser
-  4 86 56c 6c6f \2\3
-  20776 f726c64
+byte-strings = 'hello world' / h'68656c6c6f20776f726c64' / b64'Zm-9v_YmE='
+byte-strings-w-errors = h'68656gc6c6f2077oops6f726c64' / b64'Zm+9vY/mE='
+oneline-bstr = '<?php print(\'hello world\');  // no comment … ?>'
+multiline-bstr = '
+  <?php
+    print(\'hello world\');  // no comment
+    … ?>
+'
+multiline-hex = h'
+   83        ; \'83\' means Array of length 3
+      01     ; 1
+      82     ; Array of length 2
+         02  ; 2
+         03  ; 3
+      82     ; Array of length 2
+         04  ; 4
+         05  ; 5
+'
+multiline-hex-err = h'
+   83         \'83\' means Array of length 3 (oops, missed the \';\')
+      01     ; 1
 '
 
 ; THE STANDARD "POSTLUDE"

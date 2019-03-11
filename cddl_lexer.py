@@ -18,6 +18,7 @@ import re
 from pygments.lexer import RegexLexer, bygroups, include, words
 from pygments.token import (
     Comment,
+    Error,
     Keyword,
     Name,
     Number,
@@ -125,7 +126,9 @@ class CddlLexer(RegexLexer):
             (r"=>|/==|/=|=", Operator),
             (r"[\[\]{}\(\),<>:]", Punctuation),
             # Bytestrings
-            (r"(b64|h|)('(?:\\\\|\\'|[^'])*')", bygroups(String.Affix, String.Single)),
+            (r"(b64)(')", bygroups(String.Affix, String.Single), "bstrb64url"),
+            (r"(h)(')", bygroups(String.Affix, String.Single), "bstrh"),
+            (r"'", String.Single, "bstr"),
             # Barewords as member keys (must be matched before values, types, typenames, groupnames).
             # Token type is String as barewords are always interpreted as such.
             (
@@ -147,5 +150,25 @@ class CddlLexer(RegexLexer):
             (r"(\d+\.\d+|\d+)(?:e[+-]?\d+|)", Number.Float),
             (r"\d+", Number.Int),
             (r'"(\\\\|\\"|[^"])*"', String.Double),
+        ],
+        "bstrb64url": [
+            (r"'", String.Single, "#pop"),
+            include("commentsandwhitespace"),
+            (r"\\.", String.Escape),
+            (r"[0-9a-zA-Z\-_=]+", String.Single),
+            (r".", Error),
+            # (r";.+$", Token.Other),
+        ],
+        "bstrh": [
+            (r"'", String.Single, "#pop"),
+            include("commentsandwhitespace"),
+            (r"\\.", String.Escape),
+            (r"[0-9a-fA-F]+", String.Single),
+            (r".", Error),
+        ],
+        "bstr": [
+            (r"'", String.Single, "#pop"),
+            (r"\\.", String.Escape),
+            (r"[^']", String.Single),
         ],
     }
