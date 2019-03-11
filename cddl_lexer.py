@@ -124,6 +124,8 @@ class CddlLexer(RegexLexer):
             (r"//|/(?!/)", Operator),  # double und single slash
             (r"=>|/==|/=|=", Operator),
             (r"[\[\]{}\(\),<>:]", Punctuation),
+            # Bytestrings
+            (r"(b64|h|)('(?:\\\\|\\'|[^'])*')", bygroups(String.Affix, String.Single)),
             # Barewords as member keys (must be matched before values, types, typenames, groupnames).
             # Token type is String as barewords are always interpreted as such.
             (
@@ -144,6 +146,6 @@ class CddlLexer(RegexLexer):
             (r"0x[0-9a-fA-F]+", Number.Hex),  # hex
             (r"(\d+\.\d+|\d+)(?:e[+-]?\d+|)", Number.Float),
             (r"\d+", Number.Int),
-            (r'"(\\\\|\\"|[^"])*"', String),
+            (r'"(\\\\|\\"|[^"])*"', String.Double),
         ],
     }

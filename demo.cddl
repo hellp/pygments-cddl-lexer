@@ -280,7 +280,11 @@ t = [group4a]
 group4a = ((+ a) // (b / c))
 a = 1 b = 2 c = 3
 
-nai = tstr .regexp "[A-Za-z0-9]+@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)+"
+byte-strings = 'hello world' / h'68656c6c6f20776f726c64' / b64'asdf'
+multi-line-byte = 'hello  ; everything is allowed here, interpretation up to the parser
+  4 86 56c 6c6f \2\3
+  20776 f726c64
+'
 
 ; THE STANDARD "POSTLUDE"
 any = #
