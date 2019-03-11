@@ -131,7 +131,7 @@ body .il { color: #ae81ff } /* Literal.Number.Integer.Long */
 <span class="s">name</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span> <span class="s">zip-code</span><span class="p">:</span> <span class="nb">uint</span>
 <span class="p">)</span>
 
-<span class="nc">attire</span> <span class="o">/=</span> <span class="s">&quot;swimwear&quot;</span>
+<span class="nc">attire</span> <span class="o">/=</span> <span class="s2">&quot;swimwear&quot;</span>
 
 <span class="nc">delivery</span> <span class="o">//=</span> <span class="p">(</span>
 <span class="s">lat</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="s">long</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="s">drone-type</span><span class="p">:</span> <span class="nb">tstr</span>
@@ -172,7 +172,7 @@ body .il { color: #ae81ff } /* Literal.Number.Integer.Long */
 <span class="nc">person</span> <span class="o">=</span> <span class="p">{</span> <span class="nc">g</span> <span class="p">}</span>
 
 <span class="nc">g</span> <span class="o">=</span> <span class="p">(</span>
-  <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span>
+  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span>
   <span class="s">age</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1">; &quot;age&quot; is a bareword</span>
 <span class="p">)</span>
 
@@ -229,12 +229,12 @@ body .il { color: #ae81ff } /* Literal.Number.Integer.Long */
 <span class="nc">y</span> <span class="o">=</span> <span class="nb">float</span>
 
 <span class="nc">extensible-map-example</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="o">?</span> <span class="s">&quot;optional-key&quot;</span> <span class="o">^</span> <span class="o">=&gt;</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="o">?</span> <span class="s2">&quot;optional-key&quot;</span> <span class="o">^</span> <span class="o">=&gt;</span> <span class="nb">int</span><span class="p">,</span>
   <span class="o">*</span> <span class="nb">tstr</span> <span class="o">=&gt;</span> <span class="nb">any</span>
 <span class="p">}</span>
 
 <span class="nc">extensible-map-example</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="o">?</span> <span class="s">&quot;optional-key&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="o">?</span> <span class="s2">&quot;optional-key&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
   <span class="o">*</span> <span class="nb">tstr</span> <span class="o">=&gt;</span> <span class="nb">any</span>
 <span class="p">}</span>
 
@@ -265,7 +265,7 @@ body .il { color: #ae81ff } /* Literal.Number.Integer.Long */
 
 <span class="nc">member-keys</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s">bare-word</span><span class="p">:</span> <span class="nb">true</span><span class="p">,</span>
-  <span class="s">&quot;string&quot;</span><span class="p">:</span> <span class="nb">false</span><span class="p">,</span>
+  <span class="s2">&quot;string&quot;</span><span class="p">:</span> <span class="nb">false</span><span class="p">,</span>
   <span class="mf">4711</span><span class="p">:</span> <span class="nb">number</span><span class="p">,</span>
   <span class="mh">0xdecafe</span><span class="p">:</span> <span class="nb">false</span><span class="p">,</span>
 <span class="p">}</span>
@@ -288,7 +288,7 @@ body .il { color: #ae81ff } /* Literal.Number.Integer.Long */
 <span class="nc">rwxbits</span> <span class="o">=</span> <span class="nb">uint</span> <span class="ow">.bits</span> <span class="nc">rwx</span>
 <span class="nc">rwx</span> <span class="o">=</span> <span class="o">&amp;</span><span class="p">(</span><span class="s">r</span><span class="p">:</span> <span class="mf">2</span><span class="p">,</span> <span class="s">w</span><span class="p">:</span> <span class="mf">1</span><span class="p">,</span> <span class="s">x</span><span class="p">:</span> <span class="mf">0</span><span class="p">)</span>
 
-<span class="nc">nai</span> <span class="o">=</span> <span class="nb">tstr</span> <span class="ow">.regexp</span> <span class="s">&quot;[A-Za-z0-9]+@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)+&quot;</span>
+<span class="nc">nai</span> <span class="o">=</span> <span class="nb">tstr</span> <span class="ow">.regexp</span> <span class="s2">&quot;[A-Za-z0-9]+@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)+&quot;</span>
 
 <span class="nc">message</span> <span class="o">=</span> <span class="nc">$message</span> <span class="ow">.within</span> <span class="nc">message-structure</span>
 <span class="nc">message-structure</span> <span class="o">=</span> <span class="p">[</span><span class="nc">message_type</span><span class="p">,</span> <span class="o">*</span><span class="nc">message_option</span><span class="p">]</span>
@@ -344,7 +344,7 @@ body .il { color: #ae81ff } /* Literal.Number.Integer.Long */
   <span class="s">shoesize</span><span class="p">:</span> <span class="nb">uint</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="nc">messages</span> <span class="o">=</span> <span class="nc">message</span><span class="p">&lt;</span><span class="s">&quot;reboot&quot;</span><span class="p">,</span> <span class="s">&quot;now&quot;</span><span class="p">&gt;</span> <span class="o">/</span> <span class="nc">message</span><span class="p">&lt;</span><span class="s">&quot;sleep&quot;</span><span class="p">,</span> <span class="mf">1</span><span class="o">..</span><span class="mf">100</span><span class="p">&gt;</span>
+<span class="nc">messages</span> <span class="o">=</span> <span class="nc">message</span><span class="p">&lt;</span><span class="s2">&quot;reboot&quot;</span><span class="p">,</span> <span class="s2">&quot;now&quot;</span><span class="p">&gt;</span> <span class="o">/</span> <span class="nc">message</span><span class="p">&lt;</span><span class="s2">&quot;sleep&quot;</span><span class="p">,</span> <span class="mf">1</span><span class="o">..</span><span class="mf">100</span><span class="p">&gt;</span>
 <span class="nc">message</span><span class="p">&lt;</span><span class="nc">t</span><span class="p">,</span> <span class="nc">v</span><span class="p">&gt;</span> <span class="o">=</span> <span class="p">{</span><span class="s">type</span><span class="p">:</span> <span class="nc">t</span><span class="p">,</span> <span class="s">value</span><span class="p">:</span> <span class="nc">v</span><span class="p">}</span>
 
 <span class="nc">t</span> <span class="o">=</span> <span class="p">[</span><span class="nc">group1</span><span class="p">]</span>
@@ -367,7 +367,28 @@ body .il { color: #ae81ff } /* Literal.Number.Integer.Long */
 <span class="nc">group4a</span> <span class="o">=</span> <span class="p">((</span><span class="o">+</span> <span class="nc">a</span><span class="p">)</span> <span class="o">//</span> <span class="p">(</span><span class="nc">b</span> <span class="o">/</span> <span class="nc">c</span><span class="p">))</span>
 <span class="nc">a</span> <span class="o">=</span> <span class="mf">1</span> <span class="nc">b</span> <span class="o">=</span> <span class="mf">2</span> <span class="nc">c</span> <span class="o">=</span> <span class="mf">3</span>
 
-<span class="nc">nai</span> <span class="o">=</span> <span class="nb">tstr</span> <span class="ow">.regexp</span> <span class="s">&quot;[A-Za-z0-9]+@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)+&quot;</span>
+<span class="nc">byte-strings</span> <span class="o">=</span> <span class="s1">&#39;hello world&#39;</span> <span class="o">/</span> <span class="sa">h</span><span class="s1">&#39;68656c6c6f20776f726c64&#39;</span> <span class="o">/</span> <span class="sa">b64</span><span class="s1">&#39;Zm-9v_YmE=&#39;</span>
+<span class="nc">byte-strings-w-errors</span> <span class="o">=</span> <span class="sa">h</span><span class="s1">&#39;68656</span><span class="err">g</span><span class="s1">c6c6f2077</span><span class="err">oops</span><span class="s1">6f726c64&#39;</span> <span class="o">/</span> <span class="sa">b64</span><span class="s1">&#39;Zm</span><span class="err">+</span><span class="s1">9vY</span><span class="err">/</span><span class="s1">mE=&#39;</span>
+<span class="nc">oneline-bstr</span> <span class="o">=</span> <span class="s1">&#39;&lt;?php print(</span><span class="se">\&#39;</span><span class="s1">hello world</span><span class="se">\&#39;</span><span class="s1">);  // no comment … ?&gt;&#39;</span>
+<span class="nc">multiline-bstr</span> <span class="o">=</span> <span class="s1">&#39;</span>
+<span class="s1">  &lt;?php</span>
+<span class="s1">    print(</span><span class="se">\&#39;</span><span class="s1">hello world</span><span class="se">\&#39;</span><span class="s1">);  // no comment</span>
+<span class="s1">    … ?&gt;</span>
+<span class="s1">&#39;</span>
+<span class="nc">multiline-hex</span> <span class="o">=</span> <span class="sa">h</span><span class="s1">&#39;</span>
+   <span class="s1">83</span>        <span class="c1">; \&#39;83\&#39; means Array of length 3</span>
+      <span class="s1">01</span>     <span class="c1">; 1</span>
+      <span class="s1">82</span>     <span class="c1">; Array of length 2</span>
+         <span class="s1">02</span>  <span class="c1">; 2</span>
+         <span class="s1">03</span>  <span class="c1">; 3</span>
+      <span class="s1">82</span>     <span class="c1">; Array of length 2</span>
+         <span class="s1">04</span>  <span class="c1">; 4</span>
+         <span class="s1">05</span>  <span class="c1">; 5</span>
+<span class="s1">&#39;</span>
+<span class="nc">multiline-hex-err</span> <span class="o">=</span> <span class="sa">h</span><span class="s1">&#39;</span>
+   <span class="s1">83</span>         <span class="se">\&#39;</span><span class="s1">83</span><span class="se">\&#39;</span> <span class="err">m</span><span class="s1">ea</span><span class="err">ns</span> <span class="s1">A</span><span class="err">rr</span><span class="s1">a</span><span class="err">y</span> <span class="err">o</span><span class="s1">f</span> <span class="err">l</span><span class="s1">e</span><span class="err">ngth</span> <span class="s1">3</span> <span class="err">(oops,</span> <span class="err">miss</span><span class="s1">ed</span> <span class="err">th</span><span class="s1">e</span> <span class="se">\&#39;</span><span class="c1">;\&#39;)</span>
+      <span class="s1">01</span>     <span class="c1">; 1</span>
+<span class="s1">&#39;</span>
 
 <span class="c1">; THE STANDARD &quot;POSTLUDE&quot;</span>
 <span class="nb">any</span> <span class="o">=</span> <span class="kt">#</span>
@@ -421,6 +442,8 @@ body .il { color: #ae81ff } /* Literal.Number.Integer.Long */
 <span class="c1">; INVALID CDDL</span>
 
 <span class="nc">invalid_identifier</span><span class="err">-</span> <span class="o">=</span> <span class="err">-</span><span class="nc">another_invalid</span>
+<span class="nc">untermindated-string</span> <span class="o">=</span> <span class="err">&quot;</span><span class="nc">sometimes</span> <span class="nc">I</span> <span class="nc">cannot</span> <span class="nc">finish</span> <span class="nc">my</span><span class="err">…</span>
+<span class="nc">next-thought</span> <span class="o">=</span> <span class="p">{</span> <span class="s">valid</span><span class="p">:</span> <span class="nb">true</span> <span class="p">}</span>
 </pre></div>
 </body>
 </html>

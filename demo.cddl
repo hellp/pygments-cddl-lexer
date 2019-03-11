@@ -355,3 +355,5 @@ undefined = #7.23
 ; INVALID CDDL
 
 invalid_identifier- = -another_invalid
+untermindated-string = "sometimes I cannot finish my…
+next-thought = { valid: true }
