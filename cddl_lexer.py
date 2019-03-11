@@ -118,7 +118,7 @@ class CddlLexer(RegexLexer):
             # predefined types
             (
                 words(_prelude_types, prefix=r"(?![\-_$@])\b", suffix=r"\b(?![\-_$@])"),
-                Keyword.Type,
+                Name.Builtin,
             ),
             # user-defined groupnames, typenames
             (_re_id, Name.Class),
