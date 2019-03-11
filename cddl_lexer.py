@@ -1,3 +1,18 @@
+# -*- coding: utf-8 -*-
+"""
+    pygments.lexers.cddl
+    ~~~~~~~~~~~~~~~~~~~~
+
+    Lexer for the Concise data definition language (CDDL), a notational
+    convention to express CBOR and JSON data structures.
+
+    More information:
+    https://datatracker.ietf.org/doc/draft-ietf-cbor-cddl/
+
+    :copyright: Copyright 2006-2019 by the Pygments team, see AUTHORS.
+    :license: BSD, see LICENSE for details.
+"""
+
 import re
 
 from pygments.lexer import RegexLexer, bygroups, include, words
