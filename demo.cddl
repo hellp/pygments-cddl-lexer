@@ -1,3 +1,7 @@
+; Note: This CDDL does not make sense *semantically*.
+; These are various examples from the CDDL spec that
+; should cover most syntax cases, however.
+
 pii = (
   age: int,
   name: tstr,
