@@ -84,10 +84,14 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 <body>
 <h2></h2>
 
-<div class="highlight"><pre><span></span><span class="nc">pii</span> <span class="o">=</span> <span class="p">(</span>
-  <span class="nc">age</span><span class="p">:</span> <span class="kt">int</span><span class="p">,</span>
-  <span class="nc">name</span><span class="p">:</span> <span class="kt">tstr</span><span class="p">,</span>
-  <span class="nc">employer</span><span class="p">:</span> <span class="kt">tstr</span><span class="p">,</span>
+<div class="highlight"><pre><span></span><span class="c1">; Note: This CDDL does not make sense *semantically*.</span>
+<span class="c1">; These are various examples from the CDDL spec that</span>
+<span class="c1">; should cover most syntax cases, however.</span>
+
+<span class="nc">pii</span> <span class="o">=</span> <span class="p">(</span>
+  <span class="s">age</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="s">name</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span>
+  <span class="s">employer</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="nc">person</span> <span class="o">=</span> <span class="p">{</span>
@@ -95,41 +99,41 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 <span class="p">}</span>
 
 <span class="nc">person</span> <span class="o">=</span> <span class="p">{(</span>
-  <span class="nc">age</span><span class="p">:</span> <span class="kt">int</span><span class="p">,</span>
-  <span class="nc">name</span><span class="p">:</span> <span class="kt">tstr</span><span class="p">,</span>
-  <span class="nc">employer</span><span class="p">:</span> <span class="kt">tstr</span><span class="p">,</span>
+  <span class="s">age</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="s">name</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span>
+  <span class="s">employer</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span>
 <span class="p">)}</span>
 
 <span class="nc">person</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nc">identity</span><span class="p">,</span>
-  <span class="nc">employer</span><span class="p">:</span> <span class="kt">tstr</span><span class="p">,</span>
+  <span class="s">employer</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="nc">dog</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nc">identity</span><span class="p">,</span>
-  <span class="nc">leash-length</span><span class="p">:</span> <span class="kt">float</span><span class="p">,</span>
+  <span class="s">leash-length</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="nc">identity</span> <span class="o">=</span> <span class="p">(</span>
-  <span class="nc">age</span><span class="p">:</span> <span class="kt">int</span><span class="p">,</span>
-  <span class="nc">name</span><span class="p">:</span> <span class="kt">tstr</span><span class="p">,</span>
+  <span class="s">age</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="s">name</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="nc">address</span> <span class="o">=</span> <span class="p">{</span> <span class="nc">delivery</span> <span class="p">}</span>
 
 <span class="nc">delivery</span> <span class="o">=</span> <span class="p">(</span>
-<span class="nc">street</span><span class="p">:</span> <span class="kt">tstr</span><span class="p">,</span> <span class="o">?</span> <span class="kt">number</span><span class="p">:</span> <span class="kt">uint</span><span class="p">,</span> <span class="nc">city</span> <span class="o">//</span>
-<span class="nc">po-box</span><span class="p">:</span> <span class="kt">uint</span><span class="p">,</span> <span class="nc">city</span> <span class="o">//</span>
-<span class="nc">per-pickup</span><span class="p">:</span> <span class="kt">true</span> <span class="p">)</span>
+<span class="s">street</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span> <span class="o">?</span> <span class="s">number</span><span class="p">:</span> <span class="nb">uint</span><span class="p">,</span> <span class="nc">city</span> <span class="o">//</span>
+<span class="s">po-box</span><span class="p">:</span> <span class="nb">uint</span><span class="p">,</span> <span class="nc">city</span> <span class="o">//</span>
+<span class="s">per-pickup</span><span class="p">:</span> <span class="nb">true</span> <span class="p">)</span>
 
 <span class="nc">city</span> <span class="o">=</span> <span class="p">(</span>
-<span class="nc">name</span><span class="p">:</span> <span class="kt">tstr</span><span class="p">,</span> <span class="nc">zip-code</span><span class="p">:</span> <span class="kt">uint</span>
+<span class="s">name</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span> <span class="s">zip-code</span><span class="p">:</span> <span class="nb">uint</span>
 <span class="p">)</span>
 
 <span class="nc">attire</span> <span class="o">/=</span> <span class="s">&quot;swimwear&quot;</span>
 
 <span class="nc">delivery</span> <span class="o">//=</span> <span class="p">(</span>
-<span class="nc">lat</span><span class="p">:</span> <span class="kt">float</span><span class="p">,</span> <span class="nc">long</span><span class="p">:</span> <span class="kt">float</span><span class="p">,</span> <span class="nc">drone-type</span><span class="p">:</span> <span class="kt">tstr</span>
+<span class="s">lat</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="s">long</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="s">drone-type</span><span class="p">:</span> <span class="nb">tstr</span>
 <span class="p">)</span>
 
 <span class="nc">device-address</span> <span class="o">=</span> <span class="nc">byte</span>
@@ -146,201 +150,208 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 
 <span class="nc">terminal-color</span> <span class="o">=</span> <span class="o">&amp;</span><span class="nc">basecolors</span>
 <span class="nc">basecolors</span> <span class="o">=</span> <span class="p">(</span>
-  <span class="nc">black</span><span class="p">:</span> <span class="mf">0</span><span class="p">,</span> <span class="nc">red</span><span class="p">:</span> <span class="mf">1</span><span class="p">,</span>  <span class="nc">green</span><span class="p">:</span> <span class="mf">2</span><span class="p">,</span>  <span class="nc">yellow</span><span class="p">:</span> <span class="mf">3</span><span class="p">,</span>
-  <span class="nc">blue</span><span class="p">:</span> <span class="mf">4</span><span class="p">,</span>  <span class="nc">magenta</span><span class="p">:</span> <span class="mf">5</span><span class="p">,</span>  <span class="nc">cyan</span><span class="p">:</span> <span class="mf">6</span><span class="p">,</span>  <span class="nc">white</span><span class="p">:</span> <span class="mf">7</span><span class="p">,</span>
+  <span class="s">black</span><span class="p">:</span> <span class="mf">0</span><span class="p">,</span> <span class="s">red</span><span class="p">:</span> <span class="mf">1</span><span class="p">,</span>  <span class="s">green</span><span class="p">:</span> <span class="mf">2</span><span class="p">,</span>  <span class="s">yellow</span><span class="p">:</span> <span class="mf">3</span><span class="p">,</span>
+  <span class="s">blue</span><span class="p">:</span> <span class="mf">4</span><span class="p">,</span>  <span class="s">magenta</span><span class="p">:</span> <span class="mf">5</span><span class="p">,</span>  <span class="s">cyan</span><span class="p">:</span> <span class="mf">6</span><span class="p">,</span>  <span class="s">white</span><span class="p">:</span> <span class="mf">7</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="nc">extended-color</span> <span class="o">=</span> <span class="o">&amp;</span><span class="p">(</span>
   <span class="nc">basecolors</span><span class="p">,</span>
-  <span class="nc">orange</span><span class="p">:</span> <span class="mf">8</span><span class="p">,</span>  <span class="nc">pink</span><span class="p">:</span> <span class="mf">9</span><span class="p">,</span>  <span class="nc">purple</span><span class="p">:</span> <span class="mf">10</span><span class="p">,</span>  <span class="nc">brown</span><span class="p">:</span> <span class="mf">11</span><span class="p">,</span>
+  <span class="s">orange</span><span class="p">:</span> <span class="mf">8</span><span class="p">,</span>  <span class="s">pink</span><span class="p">:</span> <span class="mf">9</span><span class="p">,</span>  <span class="s">purple</span><span class="p">:</span> <span class="mf">10</span><span class="p">,</span>  <span class="s">brown</span><span class="p">:</span> <span class="mf">11</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="nc">my_breakfast</span> <span class="o">=</span> <span class="kt">#6.55799</span><span class="p">(</span><span class="nc">breakfast</span><span class="p">)</span>   <span class="c1">; cbor-any is too general!</span>
 <span class="nc">breakfast</span> <span class="o">=</span> <span class="nc">cereal</span> <span class="o">/</span> <span class="nc">porridge</span>
-<span class="nc">cereal</span> <span class="o">=</span> <span class="kt">#6.998</span><span class="p">(</span><span class="kt">tstr</span><span class="p">)</span>
+<span class="nc">cereal</span> <span class="o">=</span> <span class="kt">#6.998</span><span class="p">(</span><span class="nb">tstr</span><span class="p">)</span>
 <span class="nc">porridge</span> <span class="o">=</span> <span class="kt">#6.999</span><span class="p">([</span><span class="nc">liquid</span><span class="p">,</span> <span class="nc">solid</span><span class="p">])</span>
 <span class="nc">liquid</span> <span class="o">=</span> <span class="nc">milk</span> <span class="o">/</span> <span class="nc">water</span>
 <span class="nc">milk</span> <span class="o">=</span> <span class="mf">0</span>
 <span class="nc">water</span> <span class="o">=</span> <span class="mf">1</span>
-<span class="nc">solid</span> <span class="o">=</span> <span class="kt">tstr</span>
+<span class="nc">solid</span> <span class="o">=</span> <span class="nb">tstr</span>
 
 <span class="c1">; This is a comment</span>
 <span class="nc">person</span> <span class="o">=</span> <span class="p">{</span> <span class="nc">g</span> <span class="p">}</span>
 
 <span class="nc">g</span> <span class="o">=</span> <span class="p">(</span>
-  <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="kt">tstr</span><span class="p">,</span>
-  <span class="nc">age</span><span class="p">:</span> <span class="kt">int</span><span class="p">,</span>  <span class="c1">; &quot;age&quot; is a bareword</span>
+  <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span>
+  <span class="s">age</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1">; &quot;age&quot; is a bareword</span>
 <span class="p">)</span>
 
 <span class="nc">apartment</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nc">kitchen</span><span class="p">:</span> <span class="nc">size</span><span class="p">,</span>
-  <span class="o">*</span> <span class="nc">bedroom</span><span class="p">:</span> <span class="nc">size</span><span class="p">,</span>
+  <span class="s">kitchen</span><span class="p">:</span> <span class="nc">size</span><span class="p">,</span>
+  <span class="o">*</span> <span class="s">bedroom</span><span class="p">:</span> <span class="nc">size</span><span class="p">,</span>
 <span class="p">}</span>
-<span class="nc">size</span> <span class="o">=</span> <span class="kt">float</span> <span class="c1">; in m2</span>
+<span class="nc">size</span> <span class="o">=</span> <span class="nb">float</span> <span class="c1">; in m2</span>
 
 <span class="nc">unlimited-people</span> <span class="o">=</span> <span class="p">[</span><span class="o">*</span> <span class="nc">person</span><span class="p">]</span>
 <span class="nc">one-or-two-people</span> <span class="o">=</span> <span class="p">[</span><span class="m">1</span><span class="o">*</span><span class="m">2</span> <span class="nc">person</span><span class="p">]</span>
 <span class="nc">at-least-two-people</span> <span class="o">=</span> <span class="p">[</span><span class="m">2</span><span class="o">*</span> <span class="nc">person</span><span class="p">]</span>
 <span class="nc">person</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="nc">name</span><span class="p">:</span> <span class="kt">tstr</span><span class="p">,</span>
-    <span class="nc">age</span><span class="p">:</span> <span class="kt">uint</span><span class="p">,</span>
+    <span class="s">name</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span>
+    <span class="s">age</span><span class="p">:</span> <span class="nb">uint</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="nc">Geography</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="nc">city</span>           <span class="p">:</span> <span class="kt">tstr</span><span class="p">,</span>
-  <span class="nc">gpsCoordinates</span> <span class="p">:</span> <span class="nc">GpsCoordinates</span><span class="p">,</span>
+  <span class="s">city</span>           <span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span>
+  <span class="s">gpsCoordinates</span> <span class="p">:</span> <span class="nc">GpsCoordinates</span><span class="p">,</span>
 <span class="p">]</span>
 
 <span class="nc">GpsCoordinates</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nc">longitude</span>      <span class="p">:</span> <span class="kt">uint</span><span class="p">,</span>            <span class="c1">; multiplied by 10^7</span>
-  <span class="nc">latitude</span>       <span class="p">:</span> <span class="kt">uint</span><span class="p">,</span>            <span class="c1">; multiplied by 10^7</span>
+  <span class="s">longitude</span>      <span class="p">:</span> <span class="nb">uint</span><span class="p">,</span>            <span class="c1">; multiplied by 10^7</span>
+  <span class="s">latitude</span>       <span class="p">:</span> <span class="nb">uint</span><span class="p">,</span>            <span class="c1">; multiplied by 10^7</span>
 <span class="p">}</span>
 <span class="nc">located-samples</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nc">sample-point</span><span class="p">:</span> <span class="kt">int</span><span class="p">,</span>
-  <span class="nc">samples</span><span class="p">:</span> <span class="p">[</span><span class="o">+</span> <span class="kt">float</span><span class="p">],</span>
+  <span class="s">sample-point</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="s">samples</span><span class="p">:</span> <span class="p">[</span><span class="o">+</span> <span class="nb">float</span><span class="p">],</span>
 <span class="p">}</span>
 
 <span class="nc">located-samples</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nc">sample-point</span><span class="p">:</span> <span class="kt">int</span><span class="p">,</span>
-  <span class="nc">samples</span><span class="p">:</span> <span class="p">[</span><span class="o">+</span> <span class="kt">float</span><span class="p">],</span>
+  <span class="s">sample-point</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="s">samples</span><span class="p">:</span> <span class="p">[</span><span class="o">+</span> <span class="nb">float</span><span class="p">],</span>
   <span class="o">*</span> <span class="nc">equipment-type</span> <span class="o">=&gt;</span> <span class="nc">equipment-tolerances</span><span class="p">,</span>
 <span class="p">}</span>
-<span class="nc">equipment-type</span> <span class="o">=</span> <span class="p">[</span><span class="nc">name</span><span class="p">:</span> <span class="kt">tstr</span><span class="p">,</span> <span class="nc">manufacturer</span><span class="p">:</span> <span class="kt">tstr</span><span class="p">]</span>
-<span class="nc">equipment-tolerances</span> <span class="o">=</span> <span class="p">[</span><span class="o">+</span> <span class="p">[</span><span class="kt">float</span><span class="p">,</span> <span class="kt">float</span><span class="p">]]</span>
+<span class="nc">equipment-type</span> <span class="o">=</span> <span class="p">[</span><span class="s">name</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span> <span class="s">manufacturer</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">]</span>
+<span class="nc">equipment-tolerances</span> <span class="o">=</span> <span class="p">[</span><span class="o">+</span> <span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]</span>
 
 <span class="nc">PersonalData</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="o">?</span> <span class="nc">displayName</span><span class="p">:</span> <span class="kt">tstr</span><span class="p">,</span>
+  <span class="o">?</span> <span class="s">displayName</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span>
   <span class="nc">NameComponents</span><span class="p">,</span>
-  <span class="o">?</span> <span class="nc">age</span><span class="p">:</span> <span class="kt">uint</span><span class="p">,</span>
-  <span class="o">*</span> <span class="kt">tstr</span> <span class="o">=&gt;</span> <span class="kt">any</span>
+  <span class="o">?</span> <span class="s">age</span><span class="p">:</span> <span class="nb">uint</span><span class="p">,</span>
+  <span class="o">*</span> <span class="nb">tstr</span> <span class="o">=&gt;</span> <span class="nb">any</span>
 <span class="p">}</span>
 
 <span class="nc">NameComponents</span> <span class="o">=</span> <span class="p">(</span>
-  <span class="o">?</span> <span class="nc">firstName</span><span class="p">:</span> <span class="kt">tstr</span><span class="p">,</span>
-  <span class="o">?</span> <span class="nc">familyName</span><span class="p">:</span> <span class="kt">tstr</span><span class="p">,</span>
+  <span class="o">?</span> <span class="s">firstName</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span>
+  <span class="o">?</span> <span class="s">familyName</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="nc">square-roots</span> <span class="o">=</span> <span class="p">{</span><span class="o">*</span> <span class="nc">x</span> <span class="o">=&gt;</span> <span class="nc">y</span><span class="p">}</span>
-<span class="nc">x</span> <span class="o">=</span> <span class="kt">int</span>
-<span class="nc">y</span> <span class="o">=</span> <span class="kt">float</span>
+<span class="nc">x</span> <span class="o">=</span> <span class="nb">int</span>
+<span class="nc">y</span> <span class="o">=</span> <span class="nb">float</span>
 
 <span class="nc">extensible-map-example</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="o">?</span> <span class="s">&quot;optional-key&quot;</span> <span class="o">^</span> <span class="o">=&gt;</span> <span class="kt">int</span><span class="p">,</span>
-  <span class="o">*</span> <span class="kt">tstr</span> <span class="o">=&gt;</span> <span class="kt">any</span>
+  <span class="o">?</span> <span class="s">&quot;optional-key&quot;</span> <span class="o">^</span> <span class="o">=&gt;</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="o">*</span> <span class="nb">tstr</span> <span class="o">=&gt;</span> <span class="nb">any</span>
 <span class="p">}</span>
 
 <span class="nc">extensible-map-example</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="o">?</span> <span class="s">&quot;optional-key&quot;</span><span class="p">:</span> <span class="kt">int</span><span class="p">,</span>
-  <span class="o">*</span> <span class="kt">tstr</span> <span class="o">=&gt;</span> <span class="kt">any</span>
+  <span class="o">?</span> <span class="s">&quot;optional-key&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="o">*</span> <span class="nb">tstr</span> <span class="o">=&gt;</span> <span class="nb">any</span>
 <span class="p">}</span>
 
 <span class="nc">extensible-map-example</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="o">?</span> <span class="nc">optional-key</span><span class="p">:</span> <span class="kt">int</span><span class="p">,</span>
-  <span class="o">*</span> <span class="kt">tstr</span> <span class="o">=&gt;</span> <span class="kt">any</span>
+  <span class="o">?</span> <span class="s">optional-key</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="o">*</span> <span class="nb">tstr</span> <span class="o">=&gt;</span> <span class="nb">any</span>
 <span class="p">}</span>
 
-<span class="kt">biguint</span> <span class="o">=</span> <span class="kt">#6.2</span><span class="p">(</span><span class="kt">bstr</span><span class="p">)</span>
-<span class="nc">buuid</span> <span class="o">=</span> <span class="kt">#6.37</span><span class="p">(</span><span class="kt">bstr</span><span class="p">)</span>
-<span class="nc">my_uri</span> <span class="o">=</span> <span class="kt">#6.32</span><span class="p">(</span><span class="kt">tstr</span><span class="p">)</span> <span class="o">/</span> <span class="kt">tstr</span>
+<span class="nb">biguint</span> <span class="o">=</span> <span class="kt">#6.2</span><span class="p">(</span><span class="nb">bstr</span><span class="p">)</span>
+<span class="nc">buuid</span> <span class="o">=</span> <span class="kt">#6.37</span><span class="p">(</span><span class="nb">bstr</span><span class="p">)</span>
+<span class="nc">my_uri</span> <span class="o">=</span> <span class="kt">#6.32</span><span class="p">(</span><span class="nb">tstr</span><span class="p">)</span> <span class="o">/</span> <span class="nb">tstr</span>
 
 <span class="nc">basic-header</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="nc">field1</span><span class="p">:</span> <span class="kt">int</span><span class="p">,</span>
-  <span class="nc">field2</span><span class="p">:</span> <span class="kt">text</span><span class="p">,</span>
+  <span class="s">field1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+  <span class="s">field2</span><span class="p">:</span> <span class="nb">text</span><span class="p">,</span>
 <span class="p">]</span>
 
 <span class="nc">advanced-header</span> <span class="o">=</span> <span class="p">[</span>
   <span class="o">~</span><span class="nc">basic-header</span><span class="p">,</span>
-  <span class="nc">field3</span><span class="p">:</span> <span class="kt">bytes</span><span class="p">,</span>
-  <span class="nc">field4</span><span class="p">:</span> <span class="o">~</span><span class="kt">time</span><span class="p">,</span>
+  <span class="s">field3</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">,</span>
+  <span class="s">field4</span><span class="p">:</span> <span class="o">~</span><span class="nb">time</span><span class="p">,</span>
 <span class="p">]</span>
 
 <span class="nc">full-address</span> <span class="o">=</span> <span class="p">[[</span><span class="o">+</span> <span class="nc">label</span><span class="p">],</span> <span class="nc">ip4</span><span class="p">,</span> <span class="nc">ip6</span><span class="p">]</span>
-<span class="nc">ip4</span> <span class="o">=</span> <span class="kt">bstr</span> <span class="o">.size</span> <span class="mf">4</span>
-<span class="nc">ip6</span> <span class="o">=</span> <span class="kt">bstr</span> <span class="o">.size</span> <span class="mf">16</span>
-<span class="nc">label</span> <span class="o">=</span> <span class="kt">bstr</span> <span class="o">.size</span> <span class="p">(</span><span class="mf">1</span><span class="o">..</span><span class="mf">63</span><span class="p">)</span>
+<span class="nc">ip4</span> <span class="o">=</span> <span class="nb">bstr</span> <span class="ow">.size</span> <span class="mf">4</span>
+<span class="nc">ip6</span> <span class="o">=</span> <span class="nb">bstr</span> <span class="ow">.size</span> <span class="mf">16</span>
+<span class="nc">label</span> <span class="o">=</span> <span class="nb">bstr</span> <span class="ow">.size</span> <span class="p">(</span><span class="mf">1</span><span class="o">..</span><span class="mf">63</span><span class="p">)</span>
 
-<span class="nc">audio_sample</span> <span class="o">=</span> <span class="kt">uint</span> <span class="o">.size</span> <span class="mf">3</span> <span class="c1">; 24-bit, equivalent to 0...16777216</span>
-
-<span class="nc">tcpflagbytes</span> <span class="o">=</span> <span class="kt">bstr</span> <span class="o">.bits</span> <span class="nc">flags</span>
-<span class="nc">flags</span> <span class="o">=</span> <span class="o">&amp;</span><span class="p">(</span>
-  <span class="nc">fin</span><span class="p">:</span> <span class="mf">8</span><span class="p">,</span>
-  <span class="nc">syn</span><span class="p">:</span> <span class="mf">9</span><span class="p">,</span>
-  <span class="nc">rst</span><span class="p">:</span> <span class="mf">10</span><span class="p">,</span>
-  <span class="nc">psh</span><span class="p">:</span> <span class="mf">11</span><span class="p">,</span>
-  <span class="nc">ack</span><span class="p">:</span> <span class="mf">12</span><span class="p">,</span>
-  <span class="nc">urg</span><span class="p">:</span> <span class="mf">13</span><span class="p">,</span>
-  <span class="nc">ece</span><span class="p">:</span> <span class="mf">14</span><span class="p">,</span>
-  <span class="nc">cwr</span><span class="p">:</span> <span class="mf">15</span><span class="p">,</span>
-  <span class="nc">ns</span><span class="p">:</span> <span class="mf">0</span><span class="p">,</span>
-<span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mf">4</span><span class="o">..</span><span class="mf">7</span><span class="p">)</span> <span class="c1">; data offset bits</span>
-
-<span class="nc">rwxbits</span> <span class="o">=</span> <span class="kt">uint</span> <span class="o">.bits</span> <span class="nc">rwx</span>
-<span class="nc">rwx</span> <span class="o">=</span> <span class="o">&amp;</span><span class="p">(</span><span class="nc">r</span><span class="p">:</span> <span class="mf">2</span><span class="p">,</span> <span class="nc">w</span><span class="p">:</span> <span class="mf">1</span><span class="p">,</span> <span class="nc">x</span><span class="p">:</span> <span class="mf">0</span><span class="p">)</span>
-
-<span class="nc">nai</span> <span class="o">=</span> <span class="kt">tstr</span> <span class="o">.regexp</span> <span class="s">&quot;[A-Za-z0-9]+@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)+&quot;</span>
-
-<span class="nc">message</span> <span class="o">=</span> <span class="nc">$message</span> <span class="o">.within</span> <span class="nc">message-structure</span>
-<span class="nc">message-structure</span> <span class="o">=</span> <span class="p">[</span><span class="nc">message_type</span><span class="p">,</span> <span class="o">*</span><span class="nc">message_option</span><span class="p">]</span>
-<span class="nc">message_type</span> <span class="o">=</span> <span class="mf">0</span><span class="o">..</span><span class="mf">255</span>
-<span class="nc">message_option</span> <span class="o">=</span> <span class="kt">any</span>
-
-<span class="nc">$message</span> <span class="o">/=</span> <span class="p">[</span><span class="mf">3</span><span class="p">,</span> <span class="nc">dough</span><span class="p">:</span> <span class="kt">text</span><span class="p">,</span> <span class="nc">topping</span><span class="p">:</span> <span class="p">[</span><span class="o">*</span> <span class="kt">text</span><span class="p">]]</span>
-<span class="nc">$message</span> <span class="o">/=</span> <span class="p">[</span><span class="mf">4</span><span class="p">,</span> <span class="nc">noodles</span><span class="p">:</span> <span class="kt">text</span><span class="p">,</span> <span class="nc">sauce</span><span class="p">:</span> <span class="kt">text</span><span class="p">,</span> <span class="nc">parmesan</span><span class="p">:</span> <span class="kt">bool</span><span class="p">]</span>
-
-<span class="nc">speed</span> <span class="o">=</span> <span class="kt">number</span> <span class="o">.ge</span> <span class="mf">0</span>  <span class="c1">; unit: m/s</span>
-
-<span class="nc">timer</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="kt">time</span><span class="p">:</span> <span class="kt">uint</span><span class="p">,</span>
-  <span class="o">?</span> <span class="nc">displayed-step</span><span class="p">:</span> <span class="p">(</span><span class="kt">number</span> <span class="o">.gt</span> <span class="mf">0</span><span class="p">)</span> <span class="o">.default</span> <span class="mf">1</span>
+<span class="nc">member-keys</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">bare-word</span><span class="p">:</span> <span class="nb">true</span><span class="p">,</span>
+  <span class="s">&quot;string&quot;</span><span class="p">:</span> <span class="nb">false</span><span class="p">,</span>
+  <span class="mf">4711</span><span class="p">:</span> <span class="nb">number</span><span class="p">,</span>
+  <span class="mh">0xdecafe</span><span class="p">:</span> <span class="nb">false</span><span class="p">,</span>
 <span class="p">}</span>
 
-<span class="nc">tcp-header</span> <span class="o">=</span> <span class="p">{</span><span class="nc">seq</span><span class="p">:</span> <span class="kt">uint</span><span class="p">,</span> <span class="nc">ack</span><span class="p">:</span> <span class="kt">uint</span><span class="p">,</span> <span class="o">*</span> <span class="nc">$$tcp-option</span><span class="p">}</span>
+<span class="nc">audio_sample</span> <span class="o">=</span> <span class="nb">uint</span> <span class="ow">.size</span> <span class="mf">3</span> <span class="c1">; 24-bit, equivalent to 0...16777216</span>
+
+<span class="nc">tcpflagbytes</span> <span class="o">=</span> <span class="nb">bstr</span> <span class="ow">.bits</span> <span class="nc">flags</span>
+<span class="nc">flags</span> <span class="o">=</span> <span class="o">&amp;</span><span class="p">(</span>
+  <span class="s">fin</span><span class="p">:</span> <span class="mf">8</span><span class="p">,</span>
+  <span class="s">syn</span><span class="p">:</span> <span class="mf">9</span><span class="p">,</span>
+  <span class="s">rst</span><span class="p">:</span> <span class="mf">10</span><span class="p">,</span>
+  <span class="s">psh</span><span class="p">:</span> <span class="mf">11</span><span class="p">,</span>
+  <span class="s">ack</span><span class="p">:</span> <span class="mf">12</span><span class="p">,</span>
+  <span class="s">urg</span><span class="p">:</span> <span class="mf">13</span><span class="p">,</span>
+  <span class="s">ece</span><span class="p">:</span> <span class="mf">14</span><span class="p">,</span>
+  <span class="s">cwr</span><span class="p">:</span> <span class="mf">15</span><span class="p">,</span>
+  <span class="s">ns</span><span class="p">:</span> <span class="mf">0</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mf">4</span><span class="o">..</span><span class="mf">7</span><span class="p">)</span> <span class="c1">; data offset bits</span>
+
+<span class="nc">rwxbits</span> <span class="o">=</span> <span class="nb">uint</span> <span class="ow">.bits</span> <span class="nc">rwx</span>
+<span class="nc">rwx</span> <span class="o">=</span> <span class="o">&amp;</span><span class="p">(</span><span class="s">r</span><span class="p">:</span> <span class="mf">2</span><span class="p">,</span> <span class="s">w</span><span class="p">:</span> <span class="mf">1</span><span class="p">,</span> <span class="s">x</span><span class="p">:</span> <span class="mf">0</span><span class="p">)</span>
+
+<span class="nc">nai</span> <span class="o">=</span> <span class="nb">tstr</span> <span class="ow">.regexp</span> <span class="s">&quot;[A-Za-z0-9]+@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)+&quot;</span>
+
+<span class="nc">message</span> <span class="o">=</span> <span class="nc">$message</span> <span class="ow">.within</span> <span class="nc">message-structure</span>
+<span class="nc">message-structure</span> <span class="o">=</span> <span class="p">[</span><span class="nc">message_type</span><span class="p">,</span> <span class="o">*</span><span class="nc">message_option</span><span class="p">]</span>
+<span class="nc">message_type</span> <span class="o">=</span> <span class="mf">0</span><span class="o">..</span><span class="mf">255</span>
+<span class="nc">message_option</span> <span class="o">=</span> <span class="nb">any</span>
+
+<span class="nc">$message</span> <span class="o">/=</span> <span class="p">[</span><span class="mf">3</span><span class="p">,</span> <span class="s">dough</span><span class="p">:</span> <span class="nb">text</span><span class="p">,</span> <span class="s">topping</span><span class="p">:</span> <span class="p">[</span><span class="o">*</span> <span class="nb">text</span><span class="p">]]</span>
+<span class="nc">$message</span> <span class="o">/=</span> <span class="p">[</span><span class="mf">4</span><span class="p">,</span> <span class="s">noodles</span><span class="p">:</span> <span class="nb">text</span><span class="p">,</span> <span class="s">sauce</span><span class="p">:</span> <span class="nb">text</span><span class="p">,</span> <span class="s">parmesan</span><span class="p">:</span> <span class="nb">bool</span><span class="p">]</span>
+
+<span class="nc">speed</span> <span class="o">=</span> <span class="nb">number</span> <span class="ow">.ge</span> <span class="mf">0</span>  <span class="c1">; unit: m/s</span>
+
+<span class="nc">timer</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">time</span><span class="p">:</span> <span class="nb">uint</span><span class="p">,</span>
+  <span class="o">?</span> <span class="s">displayed-step</span><span class="p">:</span> <span class="p">(</span><span class="nb">number</span> <span class="ow">.gt</span> <span class="mf">0</span><span class="p">)</span> <span class="ow">.default</span> <span class="mf">1</span>
+<span class="p">}</span>
+
+<span class="nc">tcp-header</span> <span class="o">=</span> <span class="p">{</span><span class="s">seq</span><span class="p">:</span> <span class="nb">uint</span><span class="p">,</span> <span class="s">ack</span><span class="p">:</span> <span class="nb">uint</span><span class="p">,</span> <span class="o">*</span> <span class="nc">$$tcp-option</span><span class="p">}</span>
 
 <span class="c1">; later, in a different file</span>
 
 <span class="nc">$$tcp-option</span> <span class="o">//=</span> <span class="p">(</span>
-<span class="nc">sack</span><span class="p">:</span> <span class="p">[</span><span class="o">+</span><span class="p">(</span><span class="nc">left</span><span class="p">:</span> <span class="kt">uint</span><span class="p">,</span> <span class="nc">right</span><span class="p">:</span> <span class="kt">uint</span><span class="p">)]</span>
+<span class="s">sack</span><span class="p">:</span> <span class="p">[</span><span class="o">+</span><span class="p">(</span><span class="s">left</span><span class="p">:</span> <span class="nb">uint</span><span class="p">,</span> <span class="s">right</span><span class="p">:</span> <span class="nb">uint</span><span class="p">)]</span>
 <span class="p">)</span>
 
 <span class="c1">; and, maybe in another file</span>
 
 <span class="nc">$$tcp-option</span> <span class="o">//=</span> <span class="p">(</span>
-<span class="nc">sack-permitted</span><span class="p">:</span> <span class="kt">true</span>
+<span class="s">sack-permitted</span><span class="p">:</span> <span class="nb">true</span>
 <span class="p">)</span>
 
 <span class="nc">PersonalData</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="o">?</span> <span class="nc">displayName</span><span class="p">:</span> <span class="kt">tstr</span><span class="p">,</span>
+  <span class="o">?</span> <span class="s">displayName</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span>
   <span class="nc">NameComponents</span><span class="p">,</span>
-  <span class="o">?</span> <span class="nc">age</span><span class="p">:</span> <span class="kt">uint</span><span class="p">,</span>
+  <span class="o">?</span> <span class="s">age</span><span class="p">:</span> <span class="nb">uint</span><span class="p">,</span>
   <span class="o">*</span> <span class="nc">$$personaldata-extensions</span>
 <span class="p">}</span>
 
 <span class="nc">NameComponents</span> <span class="o">=</span> <span class="p">(</span>
-  <span class="o">?</span> <span class="nc">firstName</span><span class="p">:</span> <span class="kt">tstr</span><span class="p">,</span>
-  <span class="o">?</span> <span class="nc">familyName</span><span class="p">:</span> <span class="kt">tstr</span><span class="p">,</span>
+  <span class="o">?</span> <span class="s">firstName</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span>
+  <span class="o">?</span> <span class="s">familyName</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="c1">; The above already works as is.</span>
 <span class="c1">; But then, we can add later:</span>
 
 <span class="nc">$$personaldata-extensions</span> <span class="o">//=</span> <span class="p">(</span>
-  <span class="nc">favorite-salsa</span><span class="p">:</span> <span class="kt">tstr</span><span class="p">,</span>
+  <span class="s">favorite-salsa</span><span class="p">:</span> <span class="nb">tstr</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="c1">; and again, somewhere else:</span>
 
 <span class="nc">$$personaldata-extensions</span> <span class="o">//=</span> <span class="p">(</span>
-  <span class="nc">shoesize</span><span class="p">:</span> <span class="kt">uint</span><span class="p">,</span>
+  <span class="s">shoesize</span><span class="p">:</span> <span class="nb">uint</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="nc">messages</span> <span class="o">=</span> <span class="nc">message</span><span class="p">&lt;</span><span class="s">&quot;reboot&quot;</span><span class="p">,</span> <span class="s">&quot;now&quot;</span><span class="p">&gt;</span> <span class="o">/</span> <span class="nc">message</span><span class="p">&lt;</span><span class="s">&quot;sleep&quot;</span><span class="p">,</span> <span class="mf">1</span><span class="o">..</span><span class="mf">100</span><span class="p">&gt;</span>
-<span class="nc">message</span><span class="p">&lt;</span><span class="nc">t</span><span class="p">,</span> <span class="nc">v</span><span class="p">&gt;</span> <span class="o">=</span> <span class="p">{</span><span class="nc">type</span><span class="p">:</span> <span class="nc">t</span><span class="p">,</span> <span class="nc">value</span><span class="p">:</span> <span class="nc">v</span><span class="p">}</span>
+<span class="nc">message</span><span class="p">&lt;</span><span class="nc">t</span><span class="p">,</span> <span class="nc">v</span><span class="p">&gt;</span> <span class="o">=</span> <span class="p">{</span><span class="s">type</span><span class="p">:</span> <span class="nc">t</span><span class="p">,</span> <span class="s">value</span><span class="p">:</span> <span class="nc">v</span><span class="p">}</span>
 
 <span class="nc">t</span> <span class="o">=</span> <span class="p">[</span><span class="nc">group1</span><span class="p">]</span>
 <span class="nc">group1</span> <span class="o">=</span> <span class="p">(</span><span class="nc">a</span> <span class="o">/</span> <span class="nc">b</span> <span class="o">//</span> <span class="nc">c</span> <span class="o">/</span> <span class="nc">d</span><span class="p">)</span>
 <span class="nc">a</span> <span class="o">=</span> <span class="mf">1</span> <span class="nc">b</span> <span class="o">=</span> <span class="mf">2</span> <span class="nc">c</span> <span class="o">=</span> <span class="mf">3</span> <span class="nc">d</span> <span class="o">=</span> <span class="mf">4</span>
 
 <span class="nc">t</span> <span class="o">=</span> <span class="p">{</span><span class="nc">group2</span><span class="p">}</span>
-<span class="nc">group2</span> <span class="o">=</span> <span class="p">(</span><span class="o">?</span> <span class="nc">ab</span><span class="p">:</span> <span class="nc">a</span> <span class="o">/</span> <span class="nc">b</span> <span class="o">//</span> <span class="nc">cd</span><span class="p">:</span> <span class="nc">c</span> <span class="o">/</span> <span class="nc">d</span><span class="p">)</span>
+<span class="nc">group2</span> <span class="o">=</span> <span class="p">(</span><span class="o">?</span> <span class="s">ab</span><span class="p">:</span> <span class="nc">a</span> <span class="o">/</span> <span class="nc">b</span> <span class="o">//</span> <span class="s">cd</span><span class="p">:</span> <span class="nc">c</span> <span class="o">/</span> <span class="nc">d</span><span class="p">)</span>
 <span class="nc">a</span> <span class="o">=</span> <span class="mf">1</span> <span class="nc">b</span> <span class="o">=</span> <span class="mf">2</span> <span class="nc">c</span> <span class="o">=</span> <span class="mf">3</span> <span class="nc">d</span> <span class="o">=</span> <span class="mf">4</span>
 
 <span class="nc">t</span> <span class="o">=</span> <span class="p">[</span><span class="nc">group3</span><span class="p">]</span>
@@ -355,55 +366,55 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 <span class="nc">group4a</span> <span class="o">=</span> <span class="p">((</span><span class="o">+</span> <span class="nc">a</span><span class="p">)</span> <span class="o">//</span> <span class="p">(</span><span class="nc">b</span> <span class="o">/</span> <span class="nc">c</span><span class="p">))</span>
 <span class="nc">a</span> <span class="o">=</span> <span class="mf">1</span> <span class="nc">b</span> <span class="o">=</span> <span class="mf">2</span> <span class="nc">c</span> <span class="o">=</span> <span class="mf">3</span>
 
-<span class="nc">nai</span> <span class="o">=</span> <span class="kt">tstr</span> <span class="o">.regexp</span> <span class="s">&quot;[A-Za-z0-9]+@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)+&quot;</span>
+<span class="nc">nai</span> <span class="o">=</span> <span class="nb">tstr</span> <span class="ow">.regexp</span> <span class="s">&quot;[A-Za-z0-9]+@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)+&quot;</span>
 
 <span class="c1">; THE STANDARD &quot;POSTLUDE&quot;</span>
-<span class="kt">any</span> <span class="o">=</span> <span class="kt">#</span>
+<span class="nb">any</span> <span class="o">=</span> <span class="kt">#</span>
 
-<span class="kt">uint</span> <span class="o">=</span> <span class="kt">#0</span>
-<span class="kt">nint</span> <span class="o">=</span> <span class="kt">#1</span>
-<span class="kt">int</span> <span class="o">=</span> <span class="kt">uint</span> <span class="o">/</span> <span class="kt">nint</span>
+<span class="nb">uint</span> <span class="o">=</span> <span class="kt">#0</span>
+<span class="nb">nint</span> <span class="o">=</span> <span class="kt">#1</span>
+<span class="nb">int</span> <span class="o">=</span> <span class="nb">uint</span> <span class="o">/</span> <span class="nb">nint</span>
 
-<span class="kt">bstr</span> <span class="o">=</span> <span class="kt">#2</span>
-<span class="kt">bytes</span> <span class="o">=</span> <span class="kt">bstr</span>
-<span class="kt">tstr</span> <span class="o">=</span> <span class="kt">#3</span>
-<span class="kt">text</span> <span class="o">=</span> <span class="kt">tstr</span>
+<span class="nb">bstr</span> <span class="o">=</span> <span class="kt">#2</span>
+<span class="nb">bytes</span> <span class="o">=</span> <span class="nb">bstr</span>
+<span class="nb">tstr</span> <span class="o">=</span> <span class="kt">#3</span>
+<span class="nb">text</span> <span class="o">=</span> <span class="nb">tstr</span>
 
-<span class="kt">tdate</span> <span class="o">=</span> <span class="kt">#6.0</span><span class="p">(</span><span class="kt">tstr</span><span class="p">)</span>
-<span class="kt">time</span> <span class="o">=</span> <span class="kt">#6.1</span><span class="p">(</span><span class="kt">number</span><span class="p">)</span>
-<span class="kt">number</span> <span class="o">=</span> <span class="kt">int</span> <span class="o">/</span> <span class="kt">float</span>
-<span class="kt">biguint</span> <span class="o">=</span> <span class="kt">#6.0x02</span><span class="p">(</span><span class="kt">bstr</span><span class="p">)</span>
-<span class="kt">biguint</span> <span class="o">=</span> <span class="kt">#6.2</span><span class="p">(</span><span class="kt">bstr</span><span class="p">)</span>
-<span class="kt">bignint</span> <span class="o">=</span> <span class="kt">#6.3</span><span class="p">(</span><span class="kt">bstr</span><span class="p">)</span>
-<span class="kt">bigint</span> <span class="o">=</span> <span class="kt">biguint</span> <span class="o">/</span> <span class="kt">bignint</span>
-<span class="kt">integer</span> <span class="o">=</span> <span class="kt">int</span> <span class="o">/</span> <span class="kt">bigint</span>
-<span class="kt">unsigned</span> <span class="o">=</span> <span class="kt">uint</span> <span class="o">/</span> <span class="kt">biguint</span>
-<span class="kt">decfrac</span> <span class="o">=</span> <span class="kt">#6.4</span><span class="p">([</span><span class="nc">e10</span><span class="p">:</span> <span class="kt">int</span><span class="p">,</span> <span class="nc">m</span><span class="p">:</span> <span class="kt">integer</span><span class="p">])</span>
-<span class="kt">bigfloat</span> <span class="o">=</span> <span class="kt">#6.5</span><span class="p">([</span><span class="nc">e2</span><span class="p">:</span> <span class="kt">int</span><span class="p">,</span> <span class="nc">m</span><span class="p">:</span> <span class="kt">integer</span><span class="p">])</span>
-<span class="kt">eb64url</span> <span class="o">=</span> <span class="kt">#6.21</span><span class="p">(</span><span class="kt">any</span><span class="p">)</span>
-<span class="kt">eb64legacy</span> <span class="o">=</span> <span class="kt">#6.22</span><span class="p">(</span><span class="kt">any</span><span class="p">)</span>
-<span class="kt">eb16</span> <span class="o">=</span> <span class="kt">#6.23</span><span class="p">(</span><span class="kt">any</span><span class="p">)</span>
-<span class="kt">encoded-cbor</span> <span class="o">=</span> <span class="kt">#6.24</span><span class="p">(</span><span class="kt">bstr</span><span class="p">)</span>
-<span class="kt">uri</span> <span class="o">=</span> <span class="kt">#6.32</span><span class="p">(</span><span class="kt">tstr</span><span class="p">)</span>
-<span class="kt">b64url</span> <span class="o">=</span> <span class="kt">#6.33</span><span class="p">(</span><span class="kt">tstr</span><span class="p">)</span>
-<span class="kt">b64legacy</span> <span class="o">=</span> <span class="kt">#6.34</span><span class="p">(</span><span class="kt">tstr</span><span class="p">)</span>
-<span class="kt">regexp</span> <span class="o">=</span> <span class="kt">#6.35</span><span class="p">(</span><span class="kt">tstr</span><span class="p">)</span>
-<span class="kt">mime-message</span> <span class="o">=</span> <span class="kt">#6.36</span><span class="p">(</span><span class="kt">tstr</span><span class="p">)</span>
-<span class="kt">cbor-any</span> <span class="o">=</span> <span class="kt">#6.55799</span><span class="p">(</span><span class="kt">any</span><span class="p">)</span>
+<span class="nb">tdate</span> <span class="o">=</span> <span class="kt">#6.0</span><span class="p">(</span><span class="nb">tstr</span><span class="p">)</span>
+<span class="nb">time</span> <span class="o">=</span> <span class="kt">#6.1</span><span class="p">(</span><span class="nb">number</span><span class="p">)</span>
+<span class="nb">number</span> <span class="o">=</span> <span class="nb">int</span> <span class="o">/</span> <span class="nb">float</span>
+<span class="nb">biguint</span> <span class="o">=</span> <span class="kt">#6.0x02</span><span class="p">(</span><span class="nb">bstr</span><span class="p">)</span>
+<span class="nb">biguint</span> <span class="o">=</span> <span class="kt">#6.2</span><span class="p">(</span><span class="nb">bstr</span><span class="p">)</span>
+<span class="nb">bignint</span> <span class="o">=</span> <span class="kt">#6.3</span><span class="p">(</span><span class="nb">bstr</span><span class="p">)</span>
+<span class="nb">bigint</span> <span class="o">=</span> <span class="nb">biguint</span> <span class="o">/</span> <span class="nb">bignint</span>
+<span class="nb">integer</span> <span class="o">=</span> <span class="nb">int</span> <span class="o">/</span> <span class="nb">bigint</span>
+<span class="nb">unsigned</span> <span class="o">=</span> <span class="nb">uint</span> <span class="o">/</span> <span class="nb">biguint</span>
+<span class="nb">decfrac</span> <span class="o">=</span> <span class="kt">#6.4</span><span class="p">([</span><span class="s">e10</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="s">m</span><span class="p">:</span> <span class="nb">integer</span><span class="p">])</span>
+<span class="nb">bigfloat</span> <span class="o">=</span> <span class="kt">#6.5</span><span class="p">([</span><span class="s">e2</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="s">m</span><span class="p">:</span> <span class="nb">integer</span><span class="p">])</span>
+<span class="nb">eb64url</span> <span class="o">=</span> <span class="kt">#6.21</span><span class="p">(</span><span class="nb">any</span><span class="p">)</span>
+<span class="nb">eb64legacy</span> <span class="o">=</span> <span class="kt">#6.22</span><span class="p">(</span><span class="nb">any</span><span class="p">)</span>
+<span class="nb">eb16</span> <span class="o">=</span> <span class="kt">#6.23</span><span class="p">(</span><span class="nb">any</span><span class="p">)</span>
+<span class="nb">encoded-cbor</span> <span class="o">=</span> <span class="kt">#6.24</span><span class="p">(</span><span class="nb">bstr</span><span class="p">)</span>
+<span class="nb">uri</span> <span class="o">=</span> <span class="kt">#6.32</span><span class="p">(</span><span class="nb">tstr</span><span class="p">)</span>
+<span class="nb">b64url</span> <span class="o">=</span> <span class="kt">#6.33</span><span class="p">(</span><span class="nb">tstr</span><span class="p">)</span>
+<span class="nb">b64legacy</span> <span class="o">=</span> <span class="kt">#6.34</span><span class="p">(</span><span class="nb">tstr</span><span class="p">)</span>
+<span class="nb">regexp</span> <span class="o">=</span> <span class="kt">#6.35</span><span class="p">(</span><span class="nb">tstr</span><span class="p">)</span>
+<span class="nb">mime-message</span> <span class="o">=</span> <span class="kt">#6.36</span><span class="p">(</span><span class="nb">tstr</span><span class="p">)</span>
+<span class="nb">cbor-any</span> <span class="o">=</span> <span class="kt">#6.55799</span><span class="p">(</span><span class="nb">any</span><span class="p">)</span>
 
-<span class="kt">float16</span> <span class="o">=</span> <span class="kt">#7.25</span>
-<span class="kt">float32</span> <span class="o">=</span> <span class="kt">#7.26</span>
-<span class="kt">float64</span> <span class="o">=</span> <span class="kt">#7.27</span>
-<span class="kt">float16-32</span> <span class="o">=</span> <span class="kt">float16</span> <span class="o">/</span> <span class="kt">float32</span>
-<span class="kt">float32-64</span> <span class="o">=</span> <span class="kt">float32</span> <span class="o">/</span> <span class="kt">float64</span>
-<span class="kt">float</span> <span class="o">=</span> <span class="kt">float16-32</span> <span class="o">/</span> <span class="kt">float64</span>
+<span class="nb">float16</span> <span class="o">=</span> <span class="kt">#7.25</span>
+<span class="nb">float32</span> <span class="o">=</span> <span class="kt">#7.26</span>
+<span class="nb">float64</span> <span class="o">=</span> <span class="kt">#7.27</span>
+<span class="nb">float16-32</span> <span class="o">=</span> <span class="nb">float16</span> <span class="o">/</span> <span class="nb">float32</span>
+<span class="nb">float32-64</span> <span class="o">=</span> <span class="nb">float32</span> <span class="o">/</span> <span class="nb">float64</span>
+<span class="nb">float</span> <span class="o">=</span> <span class="nb">float16-32</span> <span class="o">/</span> <span class="nb">float64</span>
 
-<span class="kt">false</span> <span class="o">=</span> <span class="kt">#7.20</span>
-<span class="kt">true</span> <span class="o">=</span> <span class="kt">#7.21</span>
-<span class="kt">bool</span> <span class="o">=</span> <span class="kt">false</span> <span class="o">/</span> <span class="kt">true</span>
-<span class="kt">nil</span> <span class="o">=</span> <span class="kt">#7.22</span>
-<span class="kt">null</span> <span class="o">=</span> <span class="kt">nil</span>
-<span class="kt">undefined</span> <span class="o">=</span> <span class="kt">#7.23</span>
+<span class="nb">false</span> <span class="o">=</span> <span class="kt">#7.20</span>
+<span class="nb">true</span> <span class="o">=</span> <span class="kt">#7.21</span>
+<span class="nb">bool</span> <span class="o">=</span> <span class="nb">false</span> <span class="o">/</span> <span class="nb">true</span>
+<span class="nb">nil</span> <span class="o">=</span> <span class="kt">#7.22</span>
+<span class="nb">null</span> <span class="o">=</span> <span class="nb">nil</span>
+<span class="nb">undefined</span> <span class="o">=</span> <span class="kt">#7.23</span>
 
 
 <span class="c1">; INVALID CDDL</span>
