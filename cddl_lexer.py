@@ -102,7 +102,7 @@ class CddlLexer(RegexLexer):
             (r"\?|\+", Operator),  # occurrence
             (r"\^", Operator),  # cuts
             (r"(\.\.\.|\.\.)", Operator),  # rangeop
-            (words(_controls, suffix=r"\b"), Operator),  # ctlops
+            (words(_controls, suffix=r"\b"), Operator.Word),  # ctlops
             # into choice op
             (r"&(?=\s*({groupname}|\())".format(groupname=_re_id), Operator),
             (r"~(?=\s*{})".format(_re_id), Operator),  # unwrap op
