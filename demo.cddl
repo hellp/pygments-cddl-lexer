@@ -172,6 +172,13 @@ ip4 = bstr .size 4
 ip6 = bstr .size 16
 label = bstr .size (1..63)
 
+member-keys = {
+  bare-word: true,
+  "string": false,
+  4711: number,
+  0xdecafe: false,
+}
+
 audio_sample = uint .size 3 ; 24-bit, equivalent to 0...16777216
 
 tcpflagbytes = bstr .bits flags

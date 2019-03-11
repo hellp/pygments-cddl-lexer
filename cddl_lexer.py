@@ -109,6 +109,12 @@ class CddlLexer(RegexLexer):
             (r"//|/(?!/)", Operator),  # double und single slash
             (r"=>|/==|/=|=", Operator),
             (r"[\[\]{}\(\),<>:]", Punctuation),
+            # Barewords as member keys (must be matched before values, types, typenames, groupnames).
+            # Token type is String as barewords are always interpreted as such.
+            (
+                r"({bareword})(\s*)(:)".format(bareword=_re_id),
+                bygroups(String, Text, Punctuation),
+            ),
             # predefined types
             (
                 words(_prelude_types, prefix=r"(?![\-_$@])\b", suffix=r"\b(?![\-_$@])"),
