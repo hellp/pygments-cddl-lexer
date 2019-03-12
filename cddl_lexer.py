@@ -99,7 +99,12 @@ class CddlLexer(RegexLexer):
         [$@A-Z_a-z]
         (?:[\-\.]*[$@0-9A-Z_a-z]|[$@0-9A-Z_a-z])*
     """
-    _re_uint = r"(?:0b[01]+|0x[0-9a-fA-F]+|\d+)"
+
+    # While the spec reads more like "an int must not start with 0" we use a
+    # lookahead here that says "after a 0 there must be no digit". This makes the
+    # '0' the invalid character in '01', which looks nicer when highlighted.
+    _re_uint = r"(?:0b[01]+|0x[0-9a-fA-F]+|[1-9]\d*|0(?!\d))"
+    _re_int = r"-?" + _re_uint
 
     flags = re.UNICODE | re.MULTILINE
 
@@ -147,8 +152,20 @@ class CddlLexer(RegexLexer):
             (r"0o[0-7]+", Number.Oct),
             (r"0x[0-9a-fA-F]+(\.[0-9a-fA-F]+|)p[+-]?\d+", Number.Hex),  # hexfloat
             (r"0x[0-9a-fA-F]+", Number.Hex),  # hex
-            (r"(\d+\.\d+|\d+)(?:e[+-]?\d+|)", Number.Float),
-            (r"\d+", Number.Int),
+            # Float
+            (
+                r"""(?x)
+                {int}
+                (?=(\.\d|e[+-]?\d)) # lookahead; at least one float-y thing coming?
+                (?:\.\d+)?          # fraction
+                (?:e[+-]?\d+)?      # and/or exponent
+                """.format(
+                    int=_re_int
+                ),
+                Number.Float,
+            ),
+            # Int
+            (_re_int, Number.Int),
             (r'"(\\\\|\\"|[^"])*"', String.Double),
         ],
         "bstrb64url": [

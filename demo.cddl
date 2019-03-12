@@ -50,14 +50,17 @@ delivery //= (
 lat: float, long: float, drone-type: tstr
 )
 
-device-address = byte
-max-byte = 255
+device-address = bytefloat
+max-byte = 0b01001001
+max-oct = 0o014
+max-int = -123
+max-float = 23.5
+int-range = 0..10 ; only integers match
+float-range = 0.0..10.0 ; only floats match
 byte = 0..max-byte ; inclusive range
 first-non-byte = 256
 byte1 = 0...first-non-byte ; byte1 is equivalent to byte
 
-int-range = 0..10 ; only integers match
-float-range = 0.0..10.0 ; only floats match
 BAD-range1 = 0..10.0 ; NOT DEFINED
 BAD-range2 = 0.0..10 ; NOT DEFINED
 numeric-range = int-range / float-range
@@ -71,6 +74,8 @@ extended-color = &(
   basecolors,
   orange: 8,  pink: 9,  purple: 10,  brown: 11,
 )
+
+foo = #
 
 my_breakfast = #6.55799(breakfast)   ; cbor-any is too general!
 breakfast = cereal / porridge
@@ -116,6 +121,16 @@ located-samples = {
   sample-point: int,
   samples: [+ float],
 }
+
+proper-ints = 1 / 0
+invalid-int = 01
+
+flt = 1.23
+flt = -1.23
+flt = 1.23e+10
+flt = 1.23e-10
+flt = 1.23e10
+val = 123
 
 located-samples = {
   sample-point: int,
@@ -170,6 +185,9 @@ advanced-header = [
   field3: bytes,
   field4: ~time,
 ]
+
+hexfloat = 0xcafe.badp-9sdf
+hexfloat = 0xcafe.badp-9
 
 full-address = [[+ label], ip4, ip6]
 ip4 = bstr .size 4
