@@ -1,0 +1,13 @@
+.coverage
+*.egg-info
+*.pyc
+*.swp
+/.pytest_cache/
+/bin/
+/eggs/
+/include/
+/lib/
+/out/
+/share/
+/src/
+lib64
